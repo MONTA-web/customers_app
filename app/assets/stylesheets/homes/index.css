@@ -1,0 +1,106 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+/* ヘッダー */
+.main_header{
+  height: 200px;
+  background-color: rgb(155, 49, 49);
+}
+
+.header_title{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.title{
+  font-size: 80px;
+  color: blanchedalmond;
+  font-family: monospace;
+  padding-top: 20px;
+  text-shadow: 2px 3px rgb(71, 70, 70);
+}
+
+.lists{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.left_list :link{
+  border: 2px solid gray;
+  border-radius: 2px;
+  padding: 20px;
+  background-color: yellowgreen;
+  opacity: 0.9;
+}
+
+.left_list :hover{
+  opacity: 1.0;
+}
+
+.right_list :link{
+  border: 2px solid gray;
+  border-radius: 2px;
+  padding: 20px;
+  margin-left: 40px;
+  background-color: yellowgreen;
+  opacity: 0.9;
+}
+
+.right_list :hover{
+  opacity: 1.0;
+}
+
+.sign_up{
+  text-decoration: none;
+  color: white;
+}
+
+.login{
+  text-decoration: none;
+  color: white;
+}
+
+.login_list{
+  color: white;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+
+
+/* メイン */
+.main{
+  height: calc(100vh - 200px);
+  background-image: url('/images/keith.jpg');
+  background-size: cover;
+}
+
+.contents{
+  display: flex;
+  justify-content: space-around;
+  font-family: monospace;
+  padding-top: 100px;
+}
+
+.image_archive {
+  width: 300px;
+  height: 300px;
+  border: 3px solid gray;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.text{
+  font-size: 30px;
+  text-align: center;
+  color: blanchedalmond;
+  margin-top: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}

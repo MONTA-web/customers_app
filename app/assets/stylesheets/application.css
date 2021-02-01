@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require simple_calendar
+ *= require_tree .
+ *= require_self
+ */
+.contents_row{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  background-image: url("/images/keith.jpg");
+  background-size: cover;
+}
+
+.container{
+  margin-top: 50px;
+  border: 10px solid rgb(170, 56, 56);
+  padding: 40px;
+  background-color: rgba(226, 219, 219, 0.8);
+  width: 500px;
+  height: 600px;
+  border-radius: 4px;
+}
+
+.login_container{
+  margin-top: 100px;
+  border: 10px solid rgb(170, 56, 56);
+  padding: 40px;
+  background-color: rgba(226, 219, 219, 0.8);
+  width: 500px;
+  height: 420px;
+  border-radius: 4px;
+}
+
+h2{
+  font-size: 40px;
+  text-align: center;
+  opacity: 0.6;
+  font-family: monospace;
+}
+
+.field{
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+label{
+  font-size: 20px;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+}
+
+.actions{
+  margin-top: 30px;
+}
+
+.actions input{
+  background-color: yellowgreen;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 2px;
+}
+
+em{
+  font-size: 20px;
+}
+
+
+
+.login-flash-message{
+  color: red;
+}
+
+li{
+  color: red;
+}

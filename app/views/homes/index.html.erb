@@ -1,0 +1,48 @@
+<div class="wrapper">
+  <div class="main_header">
+    <div class="header_title">
+      <div class="title">顧客管理 App</div>
+    </div>
+    <%= link_to "カレンダー", blogs_index_path %>
+      <div class="header_lists">
+      <% if user_signed_in? %>
+      <ul class="lists">
+          <li class="login_list">
+           <%= "こんにちは、#{current_user.name}さん" %>
+          </li>
+          <li class="right_list">
+          <%= link_to "ログアウト", destroy_user_session_path,method: :delete,class: "login" %>
+          </li>
+        </ul>
+        <% else %>
+           <ul class="lists">
+          <li class="left_list">
+           <%= link_to "新規登録", new_user_registration_path, class: "sign_up"  %>
+          </li>
+          <li class="right_list">
+          <%= link_to "ログイン", new_user_session_path, class: "login" %>
+          </li>
+        </ul>
+      <% end %>
+      </div>
+  </div>
+  
+  <div class="main">
+  <% if user_signed_in? %>
+    <div class="contents">
+      <div class="upper_content">
+        <%= link_to image_tag("customer.jpg", class:"image_archive",id: "left_tag"), new_customer_path %>
+        <div class="text">新規顧客登録</div>
+      </div>
+      <div class="middle_content">
+        <%= link_to image_tag("faile.jpg", class:"image_archive",id: "center_tag"), customers_path %>
+        <div class="text">顧客情報一覧</div>
+      </div>
+      <div class="lower_content">
+        <%= link_to image_tag("sale_data.jpg",class:"image_archive",id: "right_tag"), aggregate_result_customers_path %>
+        <div class="text">月別総売上</div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>

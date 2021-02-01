@@ -1,0 +1,134 @@
+.aggregate_wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/keith.jpg");
+  background-size: cover;
+}
+
+.total_chart{
+  margin: 50px 0 20px;
+  background-color: white;
+  padding: 30px;
+}
+
+.monitor_title{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+  font-family: monospace;
+  color: white;
+}
+
+.monitor{
+  margin: 0 0 10px;
+  background-color: rgba(240, 230, 230, 0.9);
+  padding: 10px;
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+}
+
+.aggregate_container{
+  width: 100%;
+  height: calc(100% -70px);
+  padding: 20px 50px 20px;
+  background-image: url("/images/keith.jpg");
+  background-size: cover;
+}
+
+.aggregate_search{
+  width: 600px;
+  height: 120px;
+  padding: 10px 50px;
+  background-color: rgba(240, 230, 230, 0.9);
+  border: 3px solid rgb(151, 74, 19);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.search_head{
+  font-size: 20px;
+  color: rgb(54, 53, 53);
+  font-family: monospace;
+  margin-left: 170px;
+}
+
+.search_field{
+  width: 600px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.aggregate_search span{
+  color: gray;
+  opacity: 0.9;
+}
+
+.input_date{
+  width: 180px;
+  font-size: 20px;
+}
+
+.search_btn{
+  width: 80px;
+  margin-left: 35px;
+}
+
+.search_btn input{
+  background-color: lightseagreen;
+}
+
+.aggregate_results{
+  width: 350px;
+  margin: 0 auto;
+  padding: 50px 0 10px;
+}
+
+.aggregate_title{
+  font-size: 30px;
+  text-align: center;
+  font-family: monospace;
+  color: white;
+}
+
+.aggregate_lists{
+  display: flex;
+  background-color: rgba(240, 230, 230, 0.9);
+  color: rgb(44, 43, 43);
+}
+
+.result_year{
+  width: 100px;
+  height: 25px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: right;
+}
+
+.result_month{
+  width: 50px;
+  height: 25px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: right;
+}
+
+.result_place{
+  width: 200px;
+  height: 25px;
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: right;
+}
+
+.return_top{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.return_top a{
+  background-color: rgba(240, 230, 230, 0.9);
+  color: rgb(49, 153, 49);
+  font-size: 18px;
+}

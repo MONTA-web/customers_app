@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>カレンダー(訪問記録)</h1>
+
+<%= link_to '顧客情報新規登録', new_blog_path %>
+<%= link_to '顧客情報一覧',new_blog_path%>
+
+<%= month_calendar events: @customers do |date,customers| %>
+  <%= date.day %>
+   <% customers.each do |customer| %>
+    <% if customer.user_id == current_user.id %>
+    <div>
+      <%= link_to customer.first_name ,customer_path(customer.id)%>
+    </div>
+    <% end %>
+   <% end %>
+<% end %>
+
+
+
+
+
