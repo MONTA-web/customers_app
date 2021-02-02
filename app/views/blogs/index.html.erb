@@ -1,21 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<h1>カレンダー(訪問記録)</h1>
-
-<%= link_to '顧客情報新規登録', new_blog_path %>
-<%= link_to '顧客情報一覧',new_blog_path%>
-
-<%= month_calendar events: @customers do |date,customers| %>
-  <%= date.day %>
-   <% customers.each do |customer| %>
-    <% if customer.user_id == current_user.id %>
-    <div>
-      <%= link_to customer.first_name ,customer_path(customer.id)%>
+<div class="customers_wrapper">
+<div class="customer_header">
+    <div class="customer_main">
+      <div class="customer_title">カレンダー(訪問記録)</div>
     </div>
-    <% end %>
-   <% end %>
-<% end %>
+  </div>
 
+  <div class="calender_main">
+    <div class="customer_new"> 
+      <%= link_to '顧客情報新規登録ページへ', new_customer_path %>
+    </div>
+    <div class="customer_chart">
+      <%= link_to '顧客情報一覧ページへ',customers_path %>
+    </div>
+    <div class="calendar_field">
+      <%= month_calendar events: @customers do |date,customers| %>
+        <%= date.day %>
+        <% customers.each do |customer| %>
+          <% if customer.user_id == current_user.id %>
+          <div class="visit_calender">
+            <%= link_to "#{customer.last_name} #{customer.first_name} 様へ訪問" ,customer_path(customer.id)%>
+          </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="return_top">
+        <%= link_to "トップページへ戻る", root_path %>
+    </div>
+  </div>
+</div>
 
 
 
