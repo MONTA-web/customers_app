@@ -6,6 +6,9 @@
   </div>
 
   <div class="customers_container">
+    <% if flash[:notice] %>
+        <p class="flash_message"><%= flash[:notice] %></p>
+    <% end %>
     <%= render 'search_form'%>
 
       <div class="sort">

@@ -31,6 +31,9 @@
   </div>
   
   <div class="main">
+    <% if flash[:notice] %>
+        <p class="flash_message"><%= flash[:notice] %></p>
+    <% end %>
   <% if user_signed_in? %>
     <div class="contents">
       <div class="upper_content">

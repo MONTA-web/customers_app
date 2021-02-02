@@ -15,6 +15,7 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
+        flash[:notice] = '登録が完了しました。'
         redirect_to root_path
     else
        render action: :new
@@ -29,6 +30,7 @@ class CustomersController < ApplicationController
 
   def update
     if @customer.update(customer_params)
+      flash[:notice] = "編集が完了しました。"
       redirect_to customers_path
     else
       render :edit
