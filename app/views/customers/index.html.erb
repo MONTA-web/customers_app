@@ -2,6 +2,9 @@
   <div class="customer_header">
     <div class="customer_main">
       <div class="customer_title">顧客リスト一覧</div>
+      <div class="home_top">
+        <%= link_to "トップページへ戻る", root_path %>
+      </div>
     </div>
   </div>
 
@@ -35,9 +38,6 @@
       <% @customers.each do |customer| %>
         <%= render partial: customer, locals: { customer: customer}%>
       <% end %>
-        <div class="top">
-          <%= link_to "トップページへ戻る", root_path %>
-        </div>
     </div>
   </div>
 
