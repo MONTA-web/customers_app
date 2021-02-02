@@ -104,6 +104,13 @@
   background-size: cover;
 }
 
+.flash_message{
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  font-size: 15px;
+}
+
 .contents{
   display: flex;
   justify-content: space-around;

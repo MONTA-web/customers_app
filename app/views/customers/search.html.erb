@@ -33,10 +33,10 @@
           <div class="container_lists">
             <div class="list_name"><%=link_to "#{result.last_name}" "#{result.first_name}", customer_path(result.id) %></div>
             <div class="list_address"><%= result.prefecture.name%><%= result.city%><%= result.house_number%><%= result.building_name%></div>
-            <div class="list_visit_date"><%= result.start_time.to_date %></div>
+            <div class="list_visit_date"><%= result.start_time.strftime("%Y年%m月%d日") %></div>
             <div class="list_purchase_date">
             <% if result.purchase_date.present? %>
-              <%= result.purchase_date.to_date %>
+              <%= result.purchase_date.strftime("%Y年%m月%d日") %>
             <% else %>
                 <%= "購入記録なし" %>
             <% end %>

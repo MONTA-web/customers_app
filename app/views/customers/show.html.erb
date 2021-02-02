@@ -127,7 +127,7 @@
             
             <label>訪問日</label>
             <div class="show_name">
-            <%= @customer.start_time.to_date %>
+            <%= @customer.start_time.strftime("%Y年%m月%d日") %>
             </div>
         </div>
 
@@ -136,7 +136,7 @@
             <label>購入日</label>
             <div class="show_name">
             <% unless @customer.purchase_date == nil %>
-            <%= @customer.purchase_date.to_date %>
+            <%= @customer.purchase_date.strftime("%Y年%m月%d日") %>
             <% else %>
               <%= "未入力" %>
             <% end %>
