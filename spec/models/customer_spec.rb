@@ -115,14 +115,14 @@ RSpec.describe Customer, type: :model do
         expect(@customer.errors.full_messages).to include("売上高を半角数字で入力してください")
       end
 
-      it "visit_dateが空だと登録できない" do
-        @customer.visit_date=""
+      it "start_timeが空だと登録できない" do
+        @customer.start_time=""
         @customer.valid?
         expect(@customer.errors.full_messages).to include("訪問日を入力してください")
       end
 
       it "remark_columnが150以上だと登録できない" do
-        @customer.remark_column="日本国民は、正当に選挙された国会における代表者を通じて行動し、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて自由のもたらす恵沢を確保し、政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者がこ"
+        @customer.remark_column= "あ" * 151
         @customer.valid?
         expect(@customer.errors.full_messages).to include("備考欄は150文字以内で入力してください")
       end

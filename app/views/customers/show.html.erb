@@ -136,7 +136,7 @@
             <label>購入日</label>
             <div class="show_name">
             <% unless @customer.purchase_date == nil %>
-            <%= @customer.purchase_date %>
+            <%= @customer.purchase_date.to_date %>
             <% else %>
               <%= "未入力" %>
             <% end %>

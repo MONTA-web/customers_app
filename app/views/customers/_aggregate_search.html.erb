@@ -2,8 +2,8 @@
       <div class="aggregate_search">
         <label class="search_head">検索フォーム</label><span>※指定した範囲の売上総額を月ごとに表示します</span>
         <div class="search_field">
-          <%= f.text_field :purchase_date_gteq ,placeholder: "例) 2021-01-01",class: "input_date"%>〜
-          <%= f.text_field :purchase_date_lteq ,placeholder: "例) 2021-12-31",class: "input_date"%>
+          <%= f.date_field :purchase_date_gteq ,class: "input_date"%><em>〜</em>
+          <%= f.date_field :purchase_date_lteq ,class: "input_date"%><em>まで</em>
           <div class="search_btn">
             <%= f.submit "検索"%>
           </div>

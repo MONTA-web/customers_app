@@ -3,7 +3,6 @@
     <div class="header_title">
       <div class="title">顧客管理 App</div>
     </div>
-    <%= link_to "カレンダー", blogs_index_path %>
       <div class="header_lists">
       <% if user_signed_in? %>
       <ul class="lists">
@@ -14,6 +13,10 @@
           <%= link_to "ログアウト", destroy_user_session_path,method: :delete,class: "login" %>
           </li>
         </ul>
+        <div class="calender">
+        <%= link_to image_tag("calender.jpg",class:"image_calender",id:"top_calendar"), blogs_index_path %>
+        <div class="text_calender">カレンダー(訪問記録)</div>
+      </div>
         <% else %>
            <ul class="lists">
           <li class="left_list">

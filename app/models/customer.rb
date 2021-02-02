@@ -14,6 +14,7 @@ class Customer < ApplicationRecord
     validates :city
     validates :house_number
     validates :amount_money, numericality: { only_integer: true ,message: "を半角数字で入力してください"}
+    validates :start_time
   end
    validates :remark_column,length: { minimum: 0, maximum: 150 }
 end
