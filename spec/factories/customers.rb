@@ -12,9 +12,9 @@ FactoryBot.define do
      phone              {"09012341234"}
      product_name       {"葉書"}
      amount_money       {"5000"}
-     visit_date         {"2000-10-21"}
-     purchase_date      {"2001-03-05"}
-     remark_column      {"再度交渉の末、購入いただけました。"}
+     start_time         {"2000-10-21 16:32:00"}
+     purchase_date      {"2001-03-05 13:22:00"}
+     remark_column      {"あ" * 150}
      association :user
   end
 end
