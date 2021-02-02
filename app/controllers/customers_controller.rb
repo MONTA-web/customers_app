@@ -41,7 +41,7 @@ class CustomersController < ApplicationController
   end
 
   def search
-    @results = @p.result(search_params)
+    @results = @p.result.order(created_at: :DESC)
   end
 
   def aggregate_result
@@ -71,10 +71,6 @@ class CustomersController < ApplicationController
 
   def search_product
     @p = Customer.ransack(params[:q])
-  end
-
-  def search_params
-    params.require(:q).permit(:sorts)
   end
 
 end
