@@ -121,14 +121,3 @@
   font-size: 20px;
   text-align: right;
 }
-
-.return_top{
-  text-align: center;
-  margin-top: 30px;
-}
-
-.return_top a{
-  background-color: rgba(240, 230, 230, 0.9);
-  color: rgb(49, 153, 49);
-  font-size: 18px;
-}
