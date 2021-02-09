@@ -89,3 +89,35 @@ em{
 li{
   color: red;
 }
+
+@media (max-width: 599px){
+  .contents_row{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .container{
+    width: calc(100% - 40px);
+    height: 580px;
+  }
+
+  .container h2{
+    font-size: 25px;
+  }
+
+  .login_container{
+    width: calc(100% - 40px);
+  }
+
+  .login_container h2{
+    font-size: 25px;
+  }
+
+  .field label{
+    font-size: 18px;
+  }
+
+  .actions{
+    width: 130px;
+  }
+}
