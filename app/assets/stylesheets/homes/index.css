@@ -1,6 +1,8 @@
 .wrapper {
   width: 100vw;
   height: 100vh;
+  background-image: url('/images/keith.jpg');
+  background-size: cover;
 }
 /* ヘッダー */
 .main_header{
@@ -91,6 +93,10 @@
   right: 0;
 }
 
+.sub_calender{
+  display: none;
+}
+
 .text_calender{
   color: blanchedalmond;
   font-family: monospace;
@@ -99,7 +105,7 @@
 
 /* メイン */
 .main{
-  height: calc(100vh - 200px);
+  height: calc(100% - 220px);
   background-image: url('/images/keith.jpg');
   background-size: cover;
 }
@@ -136,4 +142,83 @@
 a{
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 1024px) {
+  .wrapper{
+    width: 100%;
+  }
+  .main_header{
+    height: 400px;
+  }
+
+  .header_title{
+    margin-top: 80px;
+  }
+
+  .header_lists{
+    margin-top: 80px;
+  }
+
+  .calender{
+    right: 30px;
+    padding-left: 70px;
+  }
+
+  .contents{
+    align-items: center;
+  }
+
+  .image_archive {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 599px){
+  .wrapper{
+    width: 100%;
+    background-image: url('/images/keith.jpg');
+  }
+
+  .main_header{
+    height: 300px;
+  }
+
+  .header_title{
+    margin-top: 50px;
+  }
+
+  .title{
+    font-size: 50px;
+  }
+
+  .header_lists{
+    margin-top: 10px;
+    justify-content: space-around;
+  }
+
+  .text {
+    margin-bottom: 20px;
+  }
+
+  .main{
+    padding-top: 20px;
+    height: auto;
+  }
+
+  .contents{
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .calender{
+    display: none;
+  }
+
+  .sub_calender{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+  }
 }

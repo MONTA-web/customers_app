@@ -30,13 +30,31 @@
         
       </div>
 
+      <div class="secondary_lists">
+        <div class="upper_lists">
+          <div class="secondary_name">名前</div>
+          <div class="secondary_visit_date">訪問日</div>
+          <div class="secondary_purchase_date">購入日</div>
+          <div class="secondary_plice">売上高</div>
+        </div>
+        <div class="lower_lists">
+          <div class="secondary_address">住所</div>
+        </div>
+      </div>
+
   <% if @results.length != 0 %>
       <% @results.each do |result| %>
         <% if current_user.id == result.user_id %>
           <div class="container_lists">
-            <div class="list_name"><%=link_to "#{result.last_name}" "#{result.first_name}", customer_path(result.id) %></div>
-            <div class="list_address"><%= result.prefecture.name%><%= result.city%><%= result.house_number%><%= result.building_name%></div>
-            <div class="list_visit_date"><%= result.start_time.strftime("%Y年%m月%d日") %></div>
+            <div class="list_name">
+              <%=link_to "#{result.last_name}" "#{result.first_name}", customer_path(result.id) %>
+            </div>
+            <div class="list_address">
+              <%= result.prefecture.name%><%= result.city%><%= result.house_number%><%= result.building_name%>
+            </div>
+            <div class="list_visit_date">
+              <%= result.start_time.strftime("%Y年%m月%d日") %>
+            </div>
             <div class="list_purchase_date">
             <% if result.purchase_date.present? %>
               <%= result.purchase_date.strftime("%Y年%m月%d日") %>
@@ -48,6 +66,24 @@
                 <%= result.amount_money %>
             </div>
           </div>
+
+      <div class="secondary_lists">
+        <div class="upper_lists">
+          <div class="secondary_name"><%= link_to "#{result.last_name} #{result.first_name}", customer_path(result.id)%></div>
+          <div class="secondary_visit_date"><%= result.start_time.strftime("%Y年%m月%d日")%></div>
+          <div class="secondary_purchase_date">
+            <% if result.purchase_date.present? %>
+              <%= result.purchase_date.strftime("%Y年%m月%d日") %>
+            <% else %>
+               <%= "購入記録なし" %>
+             <% end %>
+          </div>
+          <div class="secondary_plice"><%= result.amount_money %></div>
+        </div>
+        <div class="lower_lists">
+          <div class="secondary_address"><%=result.prefecture.name%><%= result.city%><%=result.house_number%><%= result.building_name%></div>
+        </div>
+      </div>
         <% end %>
       <% end %>
   <% else %>
@@ -55,6 +91,7 @@
       該当する顧客情報はありません
     </div>
   <% end %>
-    </div>
+
   </div>
+</div>
 </div>

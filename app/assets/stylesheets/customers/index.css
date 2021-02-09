@@ -33,6 +33,10 @@
   border: 1px solid black;
 }
 
+.secondary_lists{
+  display: none;
+}
+
 .list_name{
   border-right: 1px solid black;
   width: 150px;
@@ -65,4 +69,109 @@
   width: 200px;
   color: rgb(70, 68, 68);
 }
- 
+
+@media (max-width:1350px){
+  .customer_container{
+    width: calc(100% - 80px);
+  }
+
+  .container_lists{
+    display: none;
+  }
+
+  .secondary_lists{
+    display: block;
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .upper_lists{
+    display: flex;
+  }
+
+  .secondary_name{
+    width: 150px;
+    border: 1px solid black;
+  }
+
+  .secondary_name a{
+    color: rgb(49, 153, 49);
+  }
+
+  .secondary_address{
+    width: 100%;
+    border: 1px solid black;
+    color: rgb(70, 68, 68);
+  }
+
+  .lower_lists{
+    width: 100%;
+  }
+
+  .secondary_visit_date{
+    width: 180px;
+    border: 1px solid black;
+    color: rgb(70, 68, 68);
+  }
+
+  .secondary_purchase_date{
+    width: 180px;
+    border: 1px solid black;
+    color: rgb(70, 68, 68);
+  }
+
+  .secondary_plice{
+    width: calc(100% - 510px);
+    border: 1px solid black;
+    color: rgb(70, 68, 68);
+  }
+}
+
+@media (max-width: 749px){
+
+  .secondary_lists{
+    font-size: 12px;
+  }
+
+  .secondary_name{
+    width: 100px;
+  }
+
+  .secondary_visit_date{
+    width: 120px;
+  }
+
+  .secondary_purchase_date{
+    width: 120px;
+  }
+
+  .secondary_plice{
+    width: calc(100% - 300px);
+  }
+}
+
+@media (max-width: 510px){
+  .customer_container{
+    width: 100%;
+  }
+
+  .secondary_lists{
+    font-size: 5px;
+  }
+
+  .secondary_name{
+    width: 90px;
+  }
+
+  .secondary_visit_date{
+    width: 90px;
+  }
+
+  .secondary_purchase_date{
+    width: 90px;
+  }
+
+  .secondary_plice{
+    width: calc(100% - 270px);
+  }
+}

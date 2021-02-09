@@ -49,7 +49,7 @@
   font-size: 20px;
   color: rgb(54, 53, 53);
   font-family: monospace;
-  margin-left: 190px;
+  text-align: center;
 }
 
 .search_field{
@@ -81,7 +81,7 @@
 
 .aggregate_results{
   width: 350px;
-  margin: 0 auto;
+  margin: 0  auto;
   padding: 50px 0 10px;
 }
 
@@ -120,4 +120,94 @@
   border: 1px solid black;
   font-size: 20px;
   text-align: right;
+}
+
+@media (max-width: 729px){
+  .aggregate_search{
+    width: 80%;
+  }
+
+  .search_field{
+    width: 400px;
+  }
+
+  .search_head{
+    font-size: 15px;
+  }
+
+  .search_field em{
+    font-size: 13px;
+  }
+
+  .input_date{
+    width: 130px;
+    font-size: 10px;
+  }
+
+  .monitor_title{
+    font-size: 18px;
+  }
+
+  .aggregate_title{
+    font-size: 18px;
+  }
+
+  .search_btn {
+    width: 60px;
+  }
+
+  .aggregate_container{
+    padding: 20px 10px 20px;
+  }
+}
+
+@media (max-width:577px) {
+  .aggregate_search{
+    padding: 10px;
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .search_head{
+    margin: 0 auto;
+  }
+
+  .search_field{
+    width: 280px;
+  }
+
+  .search_field em{
+    font-size: 10px;
+  }
+
+  .input_date{
+    width: 80px;
+    font-size: 10px;
+  }
+
+  .aggregate_results{
+    width: 250px;
+  }
+
+  .result_year{
+    font-size: 15px;
+  }
+
+  .result_month{
+    width: 60px;
+    font-size: 15px;
+  }
+
+  .result_place{
+    font-size: 15px;
+  }
+
+  .search_btn {
+    width: 45px;
+    margin-left: 5px;
+  }
+
+  .search_btn input{
+    font-size: 10px;
+  }
 }

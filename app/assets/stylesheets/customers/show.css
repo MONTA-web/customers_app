@@ -1,20 +1,25 @@
 .main_wrapper{
+  width: 100vw;
   height: 100vh;
-  background-color: lightgray;
+  background-image: url("/images/keith.jpg");
+  background-size: cover;
 }
 
 .customers_field{
-  height: calc(100% - 70px);
-  padding-top: 20px;
+  height: auto;
+  width: 100%;
+  padding: 20px 0 30px;
   background-image: url("/images/keith.jpg");
   background-size: cover;
 }
 
 .customers_form{
   width: calc(100vw - 300px);
+  height: 100%;
   margin: auto;
   background-color: rgba(243, 239, 239, 0.9);
   display: flex;
+  padding-right: 20px;
   padding-bottom: 40px;
   border: 3px ridge gray;
   border-radius: 5px;
@@ -35,11 +40,12 @@
  padding-top: 20px;
 }
 
-.earning_name{
-  width: 300px;
-  font-size: 20px;
+.remark_textfield{
+  width: 90%;
+  height: 90%;
   border: 1px solid black;
   padding: 10px;
+  word-wrap: break-word;
 }
 
 .edit{
@@ -50,3 +56,55 @@
   color: brown;
   margin-left: 10px;
 }
+
+@media (max-width: 1350px){
+  .customers_form{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1254px){
+  .customers_form label{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 986px){
+  .customers_form{
+    width: calc(100% - 10px);
+  }
+
+  .customers_form label{
+    font-size: 12px;
+  }
+
+  .show_name{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px){
+  .customers_form{
+    display: block;
+  }
+
+  .customers_form label{
+    font-size: 12px;
+  }
+
+  .left_form{
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .right_form{
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px){
+  .left_form{
+    padding: 0 5px;
+  }
+}
+

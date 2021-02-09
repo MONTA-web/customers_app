@@ -35,6 +35,18 @@
         
       </div>
 
+      <div class="secondary_lists">
+        <div class="upper_lists">
+          <div class="secondary_name">名前</div>
+          <div class="secondary_visit_date">訪問日</div>
+          <div class="secondary_purchase_date">購入日</div>
+          <div class="secondary_plice">売上高</div>
+        </div>
+        <div class="lower_lists">
+          <div class="secondary_address">住所</div>
+        </div>
+      </div>
+
       <% @customers.each do |customer| %>
         <%= render partial: customer, locals: { customer: customer}%>
       <% end %>
