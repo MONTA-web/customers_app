@@ -6,6 +6,10 @@
   background-size: cover;
 }
 
+.secondary_text{
+  display: none;
+}
+
 .customer_new{
   font-size: 20px;
   text-align: right;
@@ -15,10 +19,6 @@
 .customer_chart{
   font-size: 20px;
   text-align: right;
-}
-
-.calender_field{
-  height: calc(100% - 60px);
 }
 
 tr th{
@@ -33,14 +33,59 @@ tr td{
   color: rgb(15, 138, 15);
 }
 
+.visit_secondary_calender{
+  display: none;
+}
+
 .calendar-title{
   font-size: 40px;
   color: antiquewhite;
 }
 
-.home_top a{
-  background-color: rgb(155, 49, 49);
-  color: white;
-  font-size: 18px;
-  text-decoration: underline;
+@media (max-width: 1130px){
+  .calender_main{
+    padding: 50px 10px 40px;
+  }
+
+  .visit_calender{
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 777px){
+  .calender_main{
+    padding: 50px 2px 50px;
+  }
+
+  .secondary_text{
+    display: block;
+    color: rgb(240, 231, 231);
+  }
+
+  .visit_calender{
+    display: none;
+  }
+
+  .visit_secondary_calender{
+    display: block;
+    font-size: 7px;
+  }
+
+  .visit_secondary_calender a{
+    color: rgb(15, 138, 15);
+  }
+}
+
+@media (max-width:566px){
+  .customer_new {
+    font-size: 15px;
+  }
+
+  .customer_chart{
+    font-size: 15px;
+  }
+
+  .calendar-title{
+    font-size: 30px;
+  }
 }
