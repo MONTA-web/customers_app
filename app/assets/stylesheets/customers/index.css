@@ -128,9 +128,12 @@
 }
 
 @media (max-width: 749px){
+  .customer_container{
+    width: 95%;
+  }
 
   .secondary_lists{
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .secondary_name{
@@ -138,15 +141,15 @@
   }
 
   .secondary_visit_date{
-    width: 120px;
+    width: 155px;
   }
 
   .secondary_purchase_date{
-    width: 120px;
+    width: 155px;
   }
 
   .secondary_plice{
-    width: calc(100% - 300px);
+    width: calc(100% - 310px);
   }
 }
 
@@ -156,7 +159,7 @@
   }
 
   .secondary_lists{
-    font-size: 5px;
+    font-size: 12px;
   }
 
   .secondary_name{
@@ -164,11 +167,11 @@
   }
 
   .secondary_visit_date{
-    width: 90px;
+    width: 120px;
   }
 
   .secondary_purchase_date{
-    width: 90px;
+    width: 120px;
   }
 
   .secondary_plice{
