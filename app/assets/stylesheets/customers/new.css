@@ -1,11 +1,12 @@
 .customer_wrapper{
   width: 100vw;
   height: 100vh;
-  background-color: rgb(206, 203, 203);
+  background-image: url("/images/keith.jpg");
+  background-size: cover;
 }
 
 .customer_main{
-  width: 100vw;
+  width: 100%;
   height: 70px;
   background-color: rgb(155, 49, 49);
   display: flex;
@@ -20,22 +21,31 @@
   font-family: monospace;
 }
 
+.home_top a{
+  background-color: rgb(155, 49, 49);
+  color: white;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
 /* メイン */
 .customer_field{
-height: calc(100% -70px);
+height: auto;
+width: 100%;
+padding: 20px 0 30px;
 background-image: url("/images/keith.jpg");
 background-size: cover;
-padding: 20px 0 30px;
 }
 
 .customer_form{
   width: calc(100vw - 300px);
-  height: 780px;
+  height: 100%;
   margin: auto;
   background-color: rgba(226, 219, 219, 0.9);
   display: flex;
   border: 2px double dimgrey;
   border-radius: 10px;
+  padding-bottom: 20px;
 }
 
 .form_title{
@@ -48,7 +58,8 @@ padding: 20px 0 30px;
 
 .left_form{
   width: 50%;
-  padding: 0 40px;
+  padding: 0 30px;
+  height: 100%;
 }
 
 .right_form{
@@ -61,6 +72,8 @@ padding: 20px 0 30px;
 .name_field{
   display: flex;
   margin-top: 20px;
+  width: 100%;
+  height: 70px;
 }
 
 .last_name{
@@ -74,12 +87,19 @@ padding: 20px 0 30px;
 }
 
 .postal_code{
-margin: 20px 300px 0 0;
+  width: 180px;
+  margin-top: 20px;
 }
 
 .prefecture_field{
   display: flex;
   margin-top: 20px;
+  height: 60px;
+}
+
+.prefecture select{
+  width: 100%;
+  height: 47px;
 }
 
 select{
@@ -89,26 +109,29 @@ select{
 }
 
 .city{
-  margin-left: 40px;
+ margin-left: 10px;
 }
 
 .house_number{
-  width: 40%;
+  width: 70%;
   margin-top: 20px;
+  height: 60px;
 }
 
 .building{
-  width: 60%;
+  width: 70%;
   margin-top: 20px;
+  height: 60px;
 }
 
 .phone{
   width: 60%;
   margin-top: 20px;
+  height: 60px;
 }
 
 .product{
-  width: 400px;
+  width: 80%;
 }
 
 span{
@@ -162,12 +185,16 @@ display: flex;
   margin-top: 30px;
 }
 
+.earnings{
+  width: 70%;
+}
+
 .input_name{
   font-size: 20px;
   }
 
 .actions {
-  width: 30%;
+  width: 130px;
   margin: 0 auto;
 }
 
@@ -180,6 +207,134 @@ display: flex;
 .required{
   color: red;
   font-size: 15px;
+}
+
+@media (max-width: 1350px){
+  .customer_form{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1254px){
+  .right_form{
+    margin-left: 10px;
+  }
+
+  .last_name{
+    width: 200px;
+    margin-top: 6px;
+  }
+
+  .first_name{
+    width: 200px;
+
+  }
+
+  .visit_field{
+    width: 100%;
+  }
+
+  .visit_area select{
+    width: 30%;
+  }
+
+  .customer_form label{
+    font-size: 15px;
+  }
+
+  .price em{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 986px){
+  .customer_form{
+    width: calc(100% - 10px);
+  }
+
+  .customer_form label{
+    font-size: 12px;
+  }
+
+  .input_name{
+    font-size: 15px;
+  }
+
+  .prefecture select{
+    font-size: 15px;
+    height: 42px;
+  }
+
+  .visit_area {
+    width: 100%;
+  }
+
+  .visit_area select{
+    font-size: 15px;
+  }
+
+  .purchase_area {
+    width: 100%;
+  }
+
+  .purchase_area select{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px){
+  .customer_title{
+    font-size: 20px;
+  }
+
+  .home_top a{
+    font-size: 15px;
+  }
+
+  .customer_form{
+    display: block;
+  }
+
+  .customer_form label{
+    font-size: 12px;
+  }
+
+  .form_title{
+    font-size: 18px;
+  }
+
+  .left_form{
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .right_form{
+    width: 100%;
+  }
+}
+
+@media (max-width:380px){
+  .customer_title{
+    font-size: 18px;
+  }
+
+  .home_top a{
+    font-size: 15px;
+  }
+
+  .customer_form label{
+    font-size: 10px;
+  }
+  
+  .left_form{
+    padding: 0 5px;
+  }
+
+  .right_form{
+    padding-left: 2px;
+    padding-right: 5px;
+    margin-left: 3px;
+  }
 }
 
 
