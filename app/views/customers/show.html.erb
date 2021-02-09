@@ -114,7 +114,7 @@
 
           <div class="earnings">
             <label>売上高</label>
-            <div class="earning_name">
+            <div class="show_name">
             <% unless @customer.amount_money == "" %>
               <%= "#{@customer.amount_money}円" %>
             <% else %>
@@ -145,7 +145,7 @@
 
           <div class="customer_culumn">
             <label>備考欄</label>
-            <div class="show_name">
+            <div class="remark_textfield">
             <% unless @customer.remark_column =="" %>
             <%= @customer.remark_column %>
             <% else %>
