@@ -28,7 +28,7 @@
 | phone         | string       |                                |
 | product_name  | string       |                                |
 | amount_money  | integer      |                                |
-| visit_date    | date         | null: false                    |
+| start_time    | datetime     | null: false                    |
 | purchase_date | date         |                                |
 | remark_column | text         |                                |
 | user          | references   | null:false, foreign_key: true  |
