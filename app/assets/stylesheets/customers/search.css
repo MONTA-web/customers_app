@@ -104,8 +104,6 @@ width: 200px;
   display: flex;
   align-items: center;
   margin-top: 20px;
-  width: 800px;
-  
 }
 
 .search_money label{
@@ -125,4 +123,134 @@ width: 200px;
 .sort_link{
   font-size: 17px;
   color: yellow;
+}
+
+@media (max-width: 986px){
+  .search_form{
+    height: auto;
+  }
+
+  .search_prefecture select{
+    font-size: 15px;
+    height: 40px;
+  }
+}
+
+@media(max-width: 749px){
+  .search_form{
+    width: 90%;
+  }
+
+  .search_top{
+    font-size: 15px;
+  }
+
+  .search_name input{
+    width: 100px;
+    font-size: 15px;
+  }
+
+  .search_name label{
+    font-size: 15px;
+  }
+
+  .search_prefecture label{
+    font-size: 15px;
+    margin-right: 20px;
+  }
+
+  .search_city label{
+    font-size: 15px;
+  }
+
+  .search_city input{
+    font-size: 15px;
+  }
+
+  .search_visit label{
+    font-size: 15px;
+  }
+
+  .search_visit input{
+    width: 130px;
+    font-size: 11px;
+  }
+
+  .search_visit em{
+    font-size: 15px;
+  }
+
+  .search_purchase label{
+    font-size: 15PX;
+  }
+
+  .search_purchase input{
+    width: 130px;
+    font-size: 10px;
+  }
+
+  .search_purchase em{
+    font-size: 15px;
+  }
+
+  .search_money label{
+    font-size: 15PX;
+  }
+
+  .button{
+    margin: 0 auto;
+  }
+
+  .sort{
+    margin-right: 2px;
+  }
+
+  .sort_link {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 510px){
+  .search_form{
+    width: 95%;
+    padding: 5px;
+  }
+
+  .search_name{
+    margin-left: 30px;
+  }
+
+  .search_prefecture select{
+    width: 50%;
+  }
+
+  .search_visit label{
+    margin-right: 4px;
+  }
+
+  .search_visit input{
+    width: 100px;
+    font-size: 7px;
+  }
+
+  .search_visit em{
+    font-size: 8px;
+  }
+
+  .search_purchase label{
+    margin-right: 4px;
+  }
+
+  .search_purchase input{
+    width: 100px;
+    font-size: 7px;
+  }
+
+  .search_purchase em{
+    font-size: 8px;
+  }
+
+  .search_money {
+    font-size: 7px;
+  }
 }
