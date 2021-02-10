@@ -230,11 +230,11 @@ width: 200px;
 
   .search_visit input{
     width: 100px;
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .search_visit em{
-    font-size: 8px;
+    font-size: 15px;
   }
 
   .search_purchase label{
@@ -243,11 +243,11 @@ width: 200px;
 
   .search_purchase input{
     width: 100px;
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .search_purchase em{
-    font-size: 8px;
+    font-size: 15px;
   }
 
   .search_money {
