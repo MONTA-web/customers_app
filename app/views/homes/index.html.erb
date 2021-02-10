@@ -5,7 +5,7 @@
     </div>
       <div class="header_lists">
       <% if user_signed_in? %>
-      <ul class="lists">
+        <ul class="lists">
           <li class="login_list">
            <%= "こんにちは、#{current_user.name}さん" %>
           </li>
@@ -14,12 +14,14 @@
           </li>
         </ul>
         <div class="calender">
-        <%= link_to image_tag("calender.jpg",class:"image_calender",id:"top_calendar"), blogs_index_path %>
-        <div class="text_calender">カレンダー(訪問記録)</div>
-        <div class="sub_calender"><%= link_to "カレンダー(訪問記録)",blogs_index_path %></div>
-      </div>
+          <%= link_to image_tag("calender.jpg",class:"image_calender",id:"top_calendar"), blogs_index_path %>
+          <div class="text_calender">カレンダー(訪問記録)</div>
+        </div>
+        <div class="sub_calender">
+          <%= link_to "カレンダー(訪問記録)",blogs_index_path %>
+        </div>
         <% else %>
-           <ul class="lists">
+        <ul class="lists">
           <li class="left_list">
            <%= link_to "新規登録", new_user_registration_path, class: "sign_up"  %>
           </li>
