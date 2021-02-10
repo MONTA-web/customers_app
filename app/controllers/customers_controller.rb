@@ -39,6 +39,7 @@ class CustomersController < ApplicationController
 
   def destroy
     @customer.destroy
+    flash[:notice] = '削除が完了しました。'
     redirect_to customers_path
   end
 
