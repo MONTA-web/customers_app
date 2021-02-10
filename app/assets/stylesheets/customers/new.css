@@ -199,7 +199,6 @@ display: flex;
 }
 
 .actions input{
-  border: 3px solid gray;
   color: aliceblue;
   cursor: pointer;
 }
