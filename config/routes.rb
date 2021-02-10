@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'blogs/index'
   devise_for :users
   root to: "homes#index"
   resources :customers do
@@ -9,5 +8,5 @@ Rails.application.routes.draw do
       get :aggregate_search
     end
   end 
-  resources :blogs
+  get 'blogs/index'
 end
