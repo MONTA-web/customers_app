@@ -12,7 +12,7 @@
 - has_many: customers
 - has_many: blogs
 
-## customerテーブル
+## customersテーブル
 
 | Column        | Type         | Options                        |
 | ------------- | ------------ | ------------------------------ |
@@ -38,7 +38,7 @@
 - belongs_to: user
 - has_many: blogs
 
-## blogテーブル
+## blogsテーブル
 
 | Column        | Type         | Options                        |
 | ------------- | ------------ | ------------------------------ |
