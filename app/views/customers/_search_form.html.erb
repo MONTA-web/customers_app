@@ -10,7 +10,7 @@
         
           <div class="search_prefecture">
             <%= f.label :prefecture_id_eq ,"都道府県"%>
-            <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, include_blank: '指定なし'%>
+            <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, {}%>
           </div>
           <div class="search_city">
             <%= f.label :city_cont ,"市町村" %>
