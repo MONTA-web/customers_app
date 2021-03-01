@@ -1,0 +1,26 @@
+<div class="contents_row">
+  <div class="login_container">
+<h2>アカウント編集</h2>
+
+<%= form_with model: current_user,local: true do |f| %>
+  <%= render "devise/shared/error_messages", model: f.object %>
+
+
+  <div class="field">
+    <%= f.label :名前 %><br />
+    <%= f.text_field :name ,autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :メールアドレス %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "編集完了" %>
+  </div>
+<% end %>
+
+
+</div>
+</div>
