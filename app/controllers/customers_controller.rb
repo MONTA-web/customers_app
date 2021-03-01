@@ -5,7 +5,7 @@ class CustomersController < ApplicationController
   before_action :search_product, only: [:index, :search, :aggregate_result, :aggregate_search]
   def index
     customers = @p.result
-    @customers = customers.where(user_id: current_user.id).order(created_at: :DESC)
+    @customers = customers.order(created_at: :DESC)
   end
 
   def new
@@ -49,21 +49,18 @@ class CustomersController < ApplicationController
 
   def aggregate_result
     @aggregate = @p.result
-    @results = @aggregate.where(user_id: current_user.id).where('amount_money > ?',
-                                                                1).group('YEAR(purchase_date)').group('MONTH(purchase_date)').sum(:amount_money)
+    @results = @aggregate.where(user_id: current_user.id).where('amount_money > ?',1).group('YEAR(purchase_date)').group('MONTH(purchase_date)').sum(:amount_money)
   end
 
   def aggregate_search
     @aggregate = @p.result
-    @results = @aggregate.where(user_id: current_user.id).where('amount_money > ?',
-                                                                1).group('YEAR(purchase_date)').group('MONTH(purchase_date)').sum(:amount_money)
+    @results = @aggregate.where(user_id: current_user.id).where('amount_money > ?',1).group('YEAR(purchase_date)').group('MONTH(purchase_date)').sum(:amount_money)
   end
 
   private
 
   def customer_params
-    params.require(:customer).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :prefecture_id, :city,
-                                     :house_number, :building_name, :phone, :product_name, :amount_money, :start_time, :purchase_date, :remark_column).merge(user_id: current_user.id)
+    params.require(:customer).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :prefecture_id, :city, :house_number, :building_name, :phone, :product_name, :amount_money, :start_time, :purchase_date, :remark_column).merge(user_id: current_user.id)
   end
 
   def redirect_to_home
