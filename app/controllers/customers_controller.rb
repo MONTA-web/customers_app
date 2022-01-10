@@ -5,7 +5,7 @@ class CustomersController < ApplicationController
   before_action :search_product, only: [:index, :search, :aggregate_result, :aggregate_search]
   def index
     customers = @p.result
-    @customers = customers.where(user_id: current_user.id).order(created_at: :DESC)
+    @customers = customers.order(created_at: :DESC)
   end
 
   def new
